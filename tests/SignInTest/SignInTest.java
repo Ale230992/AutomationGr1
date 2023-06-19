@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
-import static pages.BasePage.sleep;
 
 public class SignInTest extends BaseTest {
     private static final Logger LOG = LoggerFactory.getLogger(SignInTest.class);

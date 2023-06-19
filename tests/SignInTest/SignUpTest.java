@@ -10,7 +10,7 @@ public class SignUpTest extends BaseTest {
     private static final Logger LOG = LoggerFactory.getLogger(SignUpTest.class);
 
     @Test
-    public void signUp(){
+    public void signUp() {
         String email = "automation@grupa1.com";
 
         LOG.info("Check Logo Sign Up");
@@ -27,11 +27,6 @@ public class SignUpTest extends BaseTest {
 
         LOG.info("Click enter sign up button");
         signInPage.clickEnterSignUpButton();
-
-
-
-
-
 
 
     }

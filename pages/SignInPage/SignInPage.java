@@ -66,12 +66,12 @@ public class SignInPage extends BasePage {
         driver.findElement(signInPasswordField).sendKeys(password);
     }
 
-    public void clickEnterButton(){
+    public void clickEnterButton() {
         LOG.info("Click 'Enter' button");
         driver.findElement(enterButton).click();
     }
 
-    public boolean isErrorMessageDisplayed(){
+    public boolean isErrorMessageDisplayed() {
         LOG.info("Verifying if error message is displayed");
         return driver.findElement(errorMsg).isDisplayed();
     }
@@ -81,17 +81,15 @@ public class SignInPage extends BasePage {
         driver.findElement(signUpEmailField).sendKeys(email);
     }
 
-    public void clickBack(){
+    public void clickBack() {
         LOG.info("Click back in browser");
         driver.navigate().back();
     }
 
-    public void clickEnterSignUpButton(){
+    public void clickEnterSignUpButton() {
         LOG.info("Click 'Enter Sign Up' button");
         driver.findElement(enterSignUpButton).click();
     }
-
-
 
 
 }

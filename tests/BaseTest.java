@@ -12,12 +12,12 @@ public class BaseTest {
     public RegisterPage registerPage = RegisterPage.getInstance();
 
     @BeforeSuite
-    public void init(){
+    public void init() {
         BasePage.setUp();
     }
 
     @AfterSuite
-    public void tearDown(){
+    public void tearDown() {
         BasePage.tearDown();
     }
 }
