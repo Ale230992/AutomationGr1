@@ -16,6 +16,14 @@ public class RegisterTest extends BaseTest {
     String adress = "Str.Luptei,nr.2, jud.Sibiu, Sibiu";
     String emailaddress = "alexandranicoara92@yahoo.ro";
     String phone = "0746 563 895";
+    String language = "Romanian";
+    String skill = "Java";
+    String country = "India";
+    String year = "1992";
+    String month = "February";
+    String day = "21";
+    String firstPassword = "BlaBla";
+    String secondPassword = "BlaBla";
 
     @Test
     public void register() {
@@ -57,6 +65,28 @@ public class RegisterTest extends BaseTest {
         LOG.info("Click checkbox button");
         registerPage.clickHockey();
         sleep(3000);
+
+        LOG.info("Click languages radio button");
+        registerPage.selectLanguage(language);
+        sleep(3000);
+
+        LOG.info("Click skill dropdown button");
+        registerPage.selectSkill(skill);
+        sleep(3000);
+
+        LOG.info("Click 'Select country'");
+        registerPage.clickSelectCountry(country);
+        sleep(3000);
+
+        LOG.info("Select Birth Date");
+        registerPage.birthDate(year,month,day);
+        sleep(3000);
+
+        LOG.info("Confirm Password Fields");
+        registerPage.confirmPasswordKey(firstPassword,secondPassword);
+        sleep(3000);
+
+
 
 
     }
