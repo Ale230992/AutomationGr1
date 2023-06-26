@@ -79,14 +79,20 @@ public class RegisterTest extends BaseTest {
         sleep(3000);
 
         LOG.info("Select Birth Date");
-        registerPage.birthDate(year,month,day);
+        registerPage.birthDate(year, month, day);
         sleep(3000);
 
         LOG.info("Confirm Password Fields");
-        registerPage.confirmPasswordKey(firstPassword,secondPassword);
+        registerPage.confirmPasswordKey(firstPassword, secondPassword);
         sleep(3000);
 
+        LOG.info("Uploading file");
+        registerPage.uploadFile();
+        sleep(3000);
 
+        LOG.info("Click 'Submit' button");
+        registerPage.clickSubmitButton();
+        sleep(3000);
 
 
     }
