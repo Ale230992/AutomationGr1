@@ -32,7 +32,7 @@ public class SwitchToAlertTest extends BaseTest {
         LOG.info("Click on 'Cancel' button");
         switchToAlertPage.clickAlertConfirmCancel();
         String cancelMessageConfirmation = switchToAlertPage.getCancelConfirmationMesage(); // Comparatie intre valorile definite pe variabila de mai sus, valoarea fiind textul ce dorim sa il confirmam gasit in elementul paginii
-        Assert.assertEquals(cancelMessage,cancelMessageConfirmation,"The values are not equal");
+        Assert.assertEquals(cancelMessage, cancelMessageConfirmation, "The values are not equal");
         sleep(3000);
 
         LOG.info("Click on'Alert with TextBox'");
@@ -40,7 +40,7 @@ public class SwitchToAlertTest extends BaseTest {
         sleep(3000);
 
         LOG.info("Click and write message");
-        switchToAlertPage.clickAlertWithTextBox();
+        switchToAlertPage.clickTriggerAlertPromptBox(cancelMessage);
         sleep(3000);
     }
 }

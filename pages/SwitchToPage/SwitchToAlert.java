@@ -26,45 +26,44 @@ public class SwitchToAlert extends BasePage {
     //Locatori
     private By triggerAlertWithOkButton = By.xpath("//button[@onclick='alertbox()']");
     private By alertWithOkAndCancel = By.xpath("//a[@href='#CancelTab']");
-    private By triggerAlertConfirmCancel=By.xpath("//button[@class='btn btn-primary']");
-    private By cancelConfirmation=By.id("demo");
-    private By alertWithTextbox= By.xpath("//a[@href='#Textbox']");
+    private By triggerAlertConfirmCancel = By.xpath("//button[@class='btn btn-primary']");
+    private By cancelConfirmation = By.id("demo");
+    private By alertWithTextbox = By.xpath("//a[@href='#Textbox']");
     private By triggerAlertPromptBox=By.xpath("//button[@onclick='promptbox()']");
 
-    public void clickTriggerAlertWithOkButton(){
+    public void clickTriggerAlertWithOkButton() {
         LOG.info("Click on'Alert with OK' button");
         driver.findElement(triggerAlertWithOkButton).click();
         driver.switchTo().alert().accept(); // Pentru Pop-op messages nu se pot gasi locatori si folosim aceasta methoda
     }
 
-    public void clickAlertWithOkAndCancel(){
-        LOG.info ("Click on 'Alert With Ok And Cancel' tab");
+    public void clickAlertWithOkAndCancel() {
+        LOG.info("Click on 'Alert With Ok And Cancel' tab");
         driver.findElement(alertWithOkAndCancel).click();
     }
 
-    public void clickAlertConfirmCancel(){
-        LOG.info ("Click on 'Cancel' button");
+    public void clickAlertConfirmCancel() {
+        LOG.info("Click on 'Cancel' button");
         driver.findElement(triggerAlertConfirmCancel).click();
         driver.switchTo().alert().dismiss();
     }
 
-    public String getCancelConfirmationMesage(){
+    public String getCancelConfirmationMesage() {
         LOG.info("Confirm getting text from element");
         return driver.findElement(cancelConfirmation).getText();
     }
 
-    public void clickAlertWithTextBox(){
+    public void clickAlertWithTextBox() {
         LOG.info("Click on'Alert with TextBox'");
         driver.findElement(alertWithTextbox).click();
     }
 
-    public void clickAlertTabWithTextBox(String message){
+    public void clickTriggerAlertPromptBox(String message){
         LOG.info("Click and write message");
         driver.findElement(triggerAlertPromptBox).click();
         driver.switchTo().alert().sendKeys(message);
         driver.switchTo().alert().accept();
     }
-
 
 
 }
